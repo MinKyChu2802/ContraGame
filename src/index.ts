@@ -2,6 +2,9 @@ import express from "express";
 import cors from "cors";
 import router from "./routes/userRouter";
 import routerAuthen from "./routes/signInRouter";
+import mapRouter from "./routes/mapRouter";
+import characterRouter from "./routes/characterRouter";
+import bulletRouter from "./routes/bulletRouter";
 import sequelize from "./configDB";
 
 const app = express();
@@ -22,6 +25,9 @@ app.use(express.urlencoded({ extended: true }));
 // routers
 app.use("/api", router);
 app.use("/api", routerAuthen);
+app.use("/api", mapRouter);
+app.use("/api", characterRouter);
+app.use("/api", bulletRouter);
 
 sequelize
   .sync({ force: true })
