@@ -89,19 +89,6 @@ const deleteUser = async (req: Request, res: Response) => {
   res.status(200).send("User is deleted!");
 };
 
-// 6. connect one to many relation User and Reviews
-
-// const getUserReviews =async (req:Request, res:Response) => {
-//   let id = req.body.id
-//   const users = await User.findAll({
-//     include:[{
-//       model: Review,
-//       as: 'review'
-//     }],
-//     where: {id}
-//   })
-// }
-
 export const userController = {
   getAllUser,
   getOneUser,
