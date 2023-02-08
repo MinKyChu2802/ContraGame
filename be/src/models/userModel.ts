@@ -17,13 +17,9 @@ export const initUser = (sequelize: Sequelize, DataTypes: any) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    repeatPassword: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     isAdmin: {
       type: DataTypes.BOOLEAN,
-      defaultValue: false,
+      alowNull: false
     },
   };
 

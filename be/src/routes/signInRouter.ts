@@ -5,16 +5,13 @@ import { MY_SECRET_KEY } from "../config/constant";
 import Joi from "joi";
 import { User } from "../models";
 import bcrypt from "bcrypt";
+import { PARTEN_PASSWORD } from "../utils";
 
 let refreshTokens: any = [];
 
 const schema = Joi.object({
   username: Joi.string().alphanum().min(3).max(16).required(),
-  password: Joi.string().pattern(
-    new RegExp(
-      "^(?=.*[a-z])(?=.*[A-Z])(?=.*d)(?=.*[@$!%*#?&])[A-Za-zd@$!#%*?&]{3,16}$"
-    )
-  ),
+  password: Joi.string().required(),
 });
 
 const generateAccessToken = (user: UserModel) => {

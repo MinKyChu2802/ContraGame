@@ -17,20 +17,6 @@ export const initCharacter = (sequelize: Sequelize, DataTypes: any) => {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    mapId: {
-      type: DataTypes.STRING,
-      references: {
-        model: 'Maps',
-        key: 'id'
-      }
-    },
-    bulletId: {
-      type: DataTypes.STRING,
-      references: {
-        model: 'Bullets',
-        key: 'id'
-      }
-    }
   };
 
   const options = {

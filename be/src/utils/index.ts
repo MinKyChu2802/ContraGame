@@ -24,3 +24,7 @@ export const verify = (req: any, res: any, next: any) => {
     res.status(401).json("You are not authenticated!");
   }
 };
+
+export const PARTEN_PASSWORD = new RegExp(
+  "^(?=.*[a-zA-Z])(?=.*d)[a-zA-Zd]{3,16}$"
+);

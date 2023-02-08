@@ -8,6 +8,6 @@ router.post("/character", verify, characterController.addCharacter);
 router.get("/character", verify, characterController.getAllCharacter);
 router.get("/character/:id", verify, characterController.getOneCharacter);
 router.put("/character/:id", verify, characterController.updateCharacter);
-router.delete("/character:id", verify, characterController.deleteCharacter);
+router.delete("/character/:id", verify, characterController.deleteCharacter);
 
 export default router;
