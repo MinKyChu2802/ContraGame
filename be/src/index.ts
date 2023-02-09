@@ -30,7 +30,7 @@ app.use("/api", characterRouter);
 app.use("/api", bulletRouter);
 
 sequelize
-  .sync({ force: true })
+  .sync()
   .then(() => {
     console.log("Tables created successfully.");
   })
